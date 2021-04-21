@@ -1,6 +1,7 @@
 import { BrowserRouter } from 'react-router-dom';
 import { Route, Switch} from 'react-router-dom';
 import './App.css';
+
 import IntroPage from './Components/IntroPage';
 import NavBar from "./Components/NavBar"
 import Project from './Components/Project';
@@ -13,7 +14,9 @@ function App() {
     <div className="App">
       <NavBar/>
       <IntroPage/>
+      
       <Skills/>
+     
       <Project/>
      
     </div>
