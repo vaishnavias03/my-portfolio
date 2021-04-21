@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const Buttons = styled.div`
     
     box-sizing: border-box;
+    background-color: ${props => props.primary ? "white":"none"};
     background-image: ${props => props.primary ? "none": "linear-gradient(315deg, #045de9 0%, #09c6f9 74%)"};
     border-radius: 50px;
     text-decoration: none;
@@ -21,5 +22,8 @@ export const Buttons = styled.div`
     &&:hover{
     border: 2px solid plum;
       cursor: pointer;
+      text-decoration: none;
   }
+
+   
 `;

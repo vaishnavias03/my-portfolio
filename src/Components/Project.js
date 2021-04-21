@@ -1,27 +1,36 @@
-import React, { Component } from 'react';
+import React, {  useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { Buttons } from './Button';
 import {ProjectData} from './Data'
 import { Head } from './Head';
+import Aos from 'aos';
+import "aos/dist/aos.css";
 
 
 
 const Project = () => {
+    useEffect(() =>{
+        Aos.init({
+            duration:2000,
+            delay: 50,
+            easing: 'ease-in-out'
+        });
+    }, [])
     return (
-        <div>
+        <div id="projects">
             <Head>My Projects</Head>
-                <Contains id="projects">
+                <Contains >
                     {ProjectData.map((item) => {
                         const {id, paragraph, githubSrc, liveVersion} = item
                             return(
-                                <Holder>
+                                <Holder data-aos="fade-up">
                                     <img width="250px" height="400px" src="https://images.pexels.com/photos/1629236/pexels-photo-1629236.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"></img>
                                     <div>
                                         <Child>
                                             <h5> {paragraph}</h5>
-                                            <Buttons ><Link to={githubSrc} target="_blank">Github</Link></Buttons>
-                                            <Buttons primary href={liveVersion}>Preview</Buttons>
+                                            <Buttons ><Link to={githubSrc} target="_blank" style={{textDecoration:"none", color: "black"}}>Github</Link></Buttons>
+                                            <Buttons  primary ><Link to={liveVersion} style={{textDecoration:"none", color: "black"}}>Preview</Link></Buttons>
                                         </Child>
                                     </div>
                                 </Holder>
@@ -35,14 +44,15 @@ const Project = () => {
 
 const Contains = styled.div`
     width: 100%;
-    height: 1000px;
+    height: 500px;
     display: flex;
     justify-content: center;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     
     @media (max-width: 1100px){
-    grid-template-columns: repeat(1, 1fr);
+        grid-template-columns: repeat(1, 1fr);
+        height: 1000px;
     }
 `;
 

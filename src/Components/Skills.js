@@ -1,12 +1,10 @@
-import React, { Component, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import {Head} from "./Head"
 import Aos from 'aos';
 import "aos/dist/aos.css";
-
 import styled from "styled-components"
-
 import {SkillsData} from "./Data"
-import Header from './Head';
+
 
 const Progress = (props) =>{
     return(
@@ -31,9 +29,9 @@ function Skills(props)
     }, [])
 
         return (
-            <div>
+            <div id="skills">
                 <Head>Skills</Head>
-                <Holder id="skills">
+                <Holder>
                     <div data-aos="fade-up"><img src="Images/vector1.jpg" width="350px" height="500px" ></img></div>
                     <Skill>
                         {SkillsData.map((item) => {
