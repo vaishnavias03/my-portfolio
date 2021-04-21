@@ -28,7 +28,7 @@ function Skills(props)
         });
     }, [])
         return (
-           <Holder>
+           <Holder id="skills">
                 <div data-aos="fade-up"><img src="Images/vector1.jpg" width="350px" height="500px" ></img></div>
             <Skill>
                

@@ -16,7 +16,7 @@ const IntroPage = ()  => {
         });
     }, [])
         return (
-           <Intro>
+           <Intro id="intro">
                <div>
                     <Text>
                         <Name data-aos="fade-left"><p>Hi, <br/> I am Vaishnavi.A.S</p></Name>

@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components' 
-import {  Link } from "react-router-dom"
-import { HashLink, NavHashLink } from "react-router-hash-link"
+// import {  Link } from "react-router-dom"
+import { HashLink as Link, NavHashLink } from "react-router-hash-link"
 import 'bootstrap/dist/css/bootstrap.min.css'
 
 function NavBar(){
@@ -13,12 +13,12 @@ function NavBar(){
               </button>
               <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav mx-auto">
-                  <Link  to="/" class="nav-item nav-link active">Home </Link>
-                  <Link to="/skills" class="nav-item nav-link" >Skills</Link>
-                  <Link to="/projects" class="nav-item nav-link" >Projects</Link>
-                  <Link to="/About-me" class="nav-item nav-link" href="#">About-me</Link>
+                  <Link smooth to="#intro" class="nav-item nav-link">Home </Link>
+                  <Link smooth to="#skills" class="nav-item nav-link" >Skills</Link>
+                  <Link smooth to="#projects" class="nav-item nav-link" >Projects</Link>
+                  <Link smooth to="#About-me" class="nav-item nav-link" href="#">About-me</Link>
               </div>
-           </div>
+          </div>
         </nav>
       </Header>
     )

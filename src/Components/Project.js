@@ -7,7 +7,7 @@ import {ProjectData} from './Data'
 
 const Project = () => {
     return (
-        <Contains>
+        <Contains id="projects">
             {ProjectData.map((item) => {
                 const {id, paragraph, githubSrc, liveVersion} = item
                     return(
@@ -93,4 +93,3 @@ const Child = styled.div`
 
 export default Project;
 
-/* <Link to="/{githubSrc}"></Link> */
