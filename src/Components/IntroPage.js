@@ -23,7 +23,7 @@ const IntroPage = ()  => {
                         <Desc >
                             <div><Typed strings={["Full Stack Developer"]} typeSpeed={70} backDelay={1200} backSpeed={60} loop/></div></Desc>
                     </Text><br/>
-                <Buttons>Linkedin</Buttons>
+                <Buttons><Link to={"//www.linkedin.com/in/vaishnavi-a-s-144a19196"} target="_blank">LinkedIn</Link></Buttons>
                 </div>
            </Intro>
         );
@@ -60,4 +60,3 @@ const Desc = styled.div`
 
 
 export default IntroPage;
-

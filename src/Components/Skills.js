@@ -25,51 +25,48 @@ function Skills(props)
     useEffect(() =>{
         Aos.init({
             duration:2000,
-            delay: 400,
+            delay: 100,
             easing: 'ease-in-out'
         });
     }, [])
+
         return (
             <div>
                 <Head>Skills</Head>
-           <Holder id="skills">
-                <div data-aos="fade-up"><img src="Images/vector1.jpg" width="350px" height="500px" ></img></div>
-            <Skill>
-               
-                {SkillsData.map((item) => {
-                    const {id, value, src, progress} = item;
-                    return(
-                        <span key={id} >
-                            <Contains data-aos="fade-up">
-                                <div> <img src={src} width="50px" height="50px"></img></div>
-                                <h5>{value}</h5>
-                                <Progress progress={progress} ></Progress>
-                            </Contains>                
-                        </span>
-                           )})}
-                           
-                </Skill>
-               
+                <Holder id="skills">
+                    <div data-aos="fade-up"><img src="Images/vector1.jpg" width="350px" height="500px" ></img></div>
+                    <Skill>
+                        {SkillsData.map((item) => {
+                            const {id, value, src, progress} = item;
+                            return(
+                                <span key={id} >
+                                    <Contains data-aos="fade-up">
+                                        <div> <img src={src} width="50px" height="50px"></img></div>
+                                        <h5>{value}</h5>
+                                        <Progress progress={progress} ></Progress>
+                                    </Contains>                
+                                </span>
+                                )})}
+                    </Skill>
                 </Holder>
-                </div>
+            </div>
             );
     
 }
 
 const Skill = styled.div`
-
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     padding: 25px;
     grid-gap: 20px;
-   
     height: 100px;
     width: 100%;
     
     @media (min-width: 1100px){
         grid-template-columns: repeat(3, 1fr);
-       padding: 3px;
+        padding: 3px;
     }
+
     && > span{
     width: 100%;
     height: 200px;
@@ -86,6 +83,7 @@ const Contains= styled.div`
     background-color: white;
     border-radius: 20px;
     box-shadow: 9px 9px 20px 0px  rgba(14, 9, 9, 0.37);
+
    && > div, h5{
     margin: 12px;
     padding: 2px;
@@ -93,37 +91,29 @@ const Contains= styled.div`
     align-items: center;
     justify-content: center;
    }
-  
-    
-
 `;
 
 const ProgressBar= styled.div`
-font-size: 7px;
-padding: 0px;
- width: 130px;
- height: 9px;
- background-color: #9c9fa2;
- border-radius: 40px;
- 
+    font-size: 7px;
+    padding: 0px;
+    width: 130px;
+    height: 9px;
+    background-color: #9c9fa2;
+    border-radius: 40px;
 `;
 
 const Parent= styled.div`
     padding-left: 5%;
     width: ${(props) => props.width};
     height: 9px;
-     background-color: #f5d809d1;
-     border-radius: 20px;
-   
-    
+    background-color: #f5d809d1;
+    border-radius: 20px; 
 `;
 
 const Holder = styled.div`
-   
     height: 1400px;
-     width: 100%;
+    width: 100%;
     
-  
     @media (min-width: 1100px){
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -132,12 +122,8 @@ const Holder = styled.div`
     }
 
     && > div{
-        padding: 5px;
-       
+        padding: 5px;  
     }
-   
- 
- 
 `;
 
 export default Skills;

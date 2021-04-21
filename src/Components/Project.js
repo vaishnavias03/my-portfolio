@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { Buttons } from './Button';
 import {ProjectData} from './Data'
@@ -19,7 +20,7 @@ const Project = () => {
                                     <div>
                                         <Child>
                                             <h5> {paragraph}</h5>
-                                            <Buttons >Github</Buttons>
+                                            <Buttons ><Link to={githubSrc} target="_blank">Github</Link></Buttons>
                                             <Buttons primary href={liveVersion}>Preview</Buttons>
                                         </Child>
                                     </div>
@@ -34,7 +35,7 @@ const Project = () => {
 
 const Contains = styled.div`
     width: 100%;
-    height: 1300px;
+    height: 1000px;
     display: flex;
     justify-content: center;
     display: grid;
