@@ -7,20 +7,19 @@ export const Buttons = styled.div`
     border-radius: 50px;
     text-decoration: none;
     outline: none;
-    border: ${props => props.primary && "3px solid #09c6f9"};
+    border: 3px solid #09c6f9;
     padding: 9px;
-     margin: 4px;
-     box-shadow: 10px 9px 12px 0px  rgba(14, 9, 9, 0.37);
+    margin: 4px;
+    box-shadow: 10px 9px 12px 0px  rgba(14, 9, 9, 0.37);
     font-family: Times new Roman;
     font-size: 20px;
     transition:  .2s ease-in;
-     width: 120px;
-     color: black;
-     float: left;
-
+    width: 120px;
+    color: black;
+    float: left;
   
-  &&:hover{
-   border: 2px solid plum;
-    cursor: pointer;
+    &&:hover{
+    border: 2px solid plum;
+      cursor: pointer;
   }
-    `;
+`;

@@ -1,4 +1,5 @@
-
+import { BrowserRouter } from 'react-router-dom';
+import { Route, Switch} from 'react-router-dom';
 import './App.css';
 import IntroPage from './Components/IntroPage';
 import NavBar from "./Components/NavBar"
@@ -7,12 +8,18 @@ import Skills from './Components/Skills';
 
 function App() {
   return (
-    <div>
-     <NavBar />
-     <IntroPage/>
-     <Skills/>
-     <Project/>
+    <BrowserRouter>
+    <Switch>
+    <div className="App">
+      <NavBar/>
+      <Route path="/" component={IntroPage} exact/>
+      <Route path="/skills" component={Skills}/>
+      <Route path ="/projects" component={Project}/>
+     
     </div>
+    </Switch>
+    </BrowserRouter>
+       
   );
 }
 

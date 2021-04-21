@@ -50,13 +50,13 @@ export const ProjectData = [
         id: 1,
         paragraph: "A portfolio website made with Html, BootStrap, React Js. "+
                    "Libraries used in this Project are Styled-components, React-Router-Dom etc...",
-        githubSrc: "",
+        githubSrc: "https://github.com/vaishnavias03/my-portfolio.git",
         liveVersion: ""
     },
     {
         id: 2,
-        paragraph: "A portfolio website made with Html, BootStrap, React Js. "+
-                   "Libraries used in this Project are Styled-components, React-Router-Dom etc...",
+        paragraph: "A simple Todo Application made with Html, sass, React.js. "+
+                    "Libraries used in this Application are styled-components, react-router-dom, Material-UI",
         githubSrc: "",
         liveVersion: ""
     }
